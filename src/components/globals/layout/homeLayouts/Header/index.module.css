@@ -1,0 +1,218 @@
+.fixed {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.headerTop {
+  @apply bg-sec;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 44px;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerTopHidden {
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+.headerBottom {
+  position: relative;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 16px transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerBottomChange {
+  box-shadow: 0px 0px 16px #0000006e;
+}
+
+.aLink {
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  margin: 0 5px;
+  padding: 0 10px;
+  box-shadow: 0 10px 10px #00000042;
+  transition: all 0.3s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aLink:hover {
+  box-shadow: 0 10px 10px transparent;
+  transform: translateY(4px);
+}
+
+.headerTopInner {
+  @apply justify-between items-center flex;
+}
+
+.headerTopLinkAuth {
+  @apply font-bold !text-main transition-all;
+  margin-left: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.headerTopLinkAuthRecharge {
+  cursor: text !important;
+}
+
+.headerTopLinkAuthRecharge::after {
+  display: none;
+}
+
+.headerTopLinkAuth::after {
+  @apply bg-main;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  left: auto;
+  right: 0;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerTopLinkAuth:hover::after {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.headerTopLinkNotAuth {
+  @apply !border-main !text-white;
+  position: relative;
+  cursor: pointer;
+  padding: 2px 10px;
+  margin: 0 5px;
+  border-radius: 4px;
+  border: 1px solid;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerTopLinkNotAuth:hover {
+  @apply !bg-white !text-main;
+  transform: translateY(2px);
+}
+
+.logo {
+  width: 20rem;
+}
+
+.logo a {
+  display: flex;
+}
+
+.log .info {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.colorMain {
+  color: #f14f04;
+}
+
+.info span {
+  color: #f14f04;
+}
+
+.boxCial i {
+  @apply text-main;
+}
+
+.dropdownMenu {
+  display: none;
+}
+
+.headerTopLeft {
+  /* @apply flex font-400 text text-[#0ba7fb] h-8 items-center; */
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #171717;
+  height: 50;
+}
+
+.login-register a {
+  color: white !important;
+}
+
+.headerTopRight {
+  @apply w-fit flex;
+}
+
+.socialHeader {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .userControl {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  /* .headerTop {
+    height: 64px;
+  } */
+}
+
+@media screen and (max-width: 1024px) {
+  .socialHeader {
+    display: none;
+  }
+  .headerTopLeft {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 16rem;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .headerBottom .right {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .headerTopLeft {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 520px) {
+  .headerTop {
+    height: 62px;
+  }
+  .headerTopLeft {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .logo {
+    width: 12rem;
+  }
+}
+
+
+.ant-btn-primary {
+  background-color: #f14f04 !important;
+}
